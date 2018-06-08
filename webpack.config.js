@@ -1,3 +1,4 @@
+require("babel-polyfill");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
@@ -6,6 +7,10 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
+  entry: [
+    'babel-polyfill',
+    './src/index.js',
+  ],
   module: {
     rules: [
       {
