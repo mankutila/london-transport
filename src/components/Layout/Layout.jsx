@@ -10,7 +10,7 @@ import {APP_ID, APP_KEY} from '../../app-data'
 
 export const Layout = () => {
    return (
-     <div className="page-wrapper">
+     <div className={style.layout}>
        <Header />
        <Sidebar />
        <Body />

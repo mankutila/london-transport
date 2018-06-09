@@ -1,0 +1,16 @@
+.logo {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 163.4 132.8'%3E%3Cpath d='M81.8 0a66.4 66.4 0 1 0 66.4 66.4A66.43 66.43 0 0 0 81.8 0m42.9 66.4a42.85 42.85 0 1 1-42.9-42.8 42.81 42.81 0 0 1 42.9 42.8' fill='%23fff'/%3E%3Cpath d='M0 53h163.4v26.9H0z' fill='%23fff'/%3E%3C/svg%3E") no-repeat 0 0 / contain;
+  padding-left: 48px;
+  font-weight: 700;
+}
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  background-color: #1c3e94;
+  color: #fff;
+  padding: 3px 15px;
+}

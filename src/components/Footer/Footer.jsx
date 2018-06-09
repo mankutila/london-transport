@@ -4,8 +4,8 @@ import style from './Footer.css';
 export class Footer extends Component {
   render() {
     return (
-      <footer>
-        footer
+      <footer className={style.footer}>
+        © 2018
       </footer>
     )
   }

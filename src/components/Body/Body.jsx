@@ -4,8 +4,9 @@ import style from './Body.css';
 export class Body extends Component {
   render() {
     return (
-      <main>
-        main
+      <main className={style.main}>
+        <h1>Bus</h1>
+        
       </main>
     )
   }

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "lint": "eslint ./src/**/*.{jsx,jx} --fix; exit 0"
   },
@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "normalize.css": "^8.0.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   },

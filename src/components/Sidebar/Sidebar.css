@@ -1,0 +1,10 @@
+.nav {
+  grid-area: nav;
+  background-color: #0D0221;
+  color: #fff;
+  padding: 20px;
+}
+.nav ul {
+  list-style: none;
+  padding-left: 0;
+}
