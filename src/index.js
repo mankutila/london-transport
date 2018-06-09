@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Layout } from './components/Layout/Layout';
 import { store } from './store/store';
+import { setTab } from './store/actions/tabActions';
 import './index.css';
-import { setTab } from './store/actions/tabActions'
 
 const App = () => {
   return <Layout />;

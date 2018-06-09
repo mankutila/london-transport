@@ -6,7 +6,6 @@ import {Sidebar} from '../Sidebar/Sidebar';
 
 import style from './Layout.css';
 
-import {APP_ID, APP_KEY} from '../../app-data'
 
 export const Layout = () => {
    return (

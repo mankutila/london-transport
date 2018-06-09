@@ -9,7 +9,7 @@ export class Sidebar extends Component {
         <ul>
           <SidebarLink type="bus" />
           <SidebarLink type="tube" />
-          <SidebarLink type="river" />
+          <SidebarLink type="river-bus" />
         </ul>
       </nav>
     )
