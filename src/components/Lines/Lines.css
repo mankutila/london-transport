@@ -1,0 +1,8 @@
+.lines {
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+}
+.lines::after {
+  content: '';
+  flex-grow: 9999
+}

@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import style from './DataList.css';
 import {connect} from 'react-redux';
-import {setTab} from '../../store/actions/tabActions';
-import { fetchLinesWithRoutes } from '../../helpers/fetchUtils'
+import {setTab} from '../../store/actions/actions';
+import { fetchLinesWithRoutes } from '../../helpers/fetchUtils';
+import {Loading} from '../Loading/Loading'
 
 import {APP_ID, APP_KEY} from '../../app-data'
+import { capitalize } from '../../helpers/utils'
+import { LineItem } from '../LineItem/LineItem';
+import {Lines} from '../Lines/Lines'
 
 class DataListComponent extends Component {
   state = {
@@ -40,11 +44,10 @@ class DataListComponent extends Component {
   render() {
     return (
       <section>
-        {this.state.loading ? 'Loading...' : ''}
-
-        {this.state.data.map((item, index) => <p key={index}>{item.name}</p>)}
+        {this.state.loading ? <Loading /> : ''}
+        <h1>{capitalize(this.props.currentTab)}</h1>
+        <Lines data={this.state.data} />
       </section>
-
     );
   }
 }

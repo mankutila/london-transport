@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import style from './SidebarLink.css';
 import {capitalize} from '../../helpers/utils'
 import { connect } from 'react-redux'
-import { setTab } from '../../store/actions/tabActions'
+import { setTab } from '../../store/actions/actions'
 
 class SidebarLinkComponent extends Component {
   render() {

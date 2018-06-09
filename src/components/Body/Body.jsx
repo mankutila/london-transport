@@ -6,7 +6,6 @@ export class Body extends Component {
   render() {
     return (
       <main className={style.main}>
-        <h1>Bus</h1>
         <DataList />
       </main>
     )

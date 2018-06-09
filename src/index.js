@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Layout } from './components/Layout/Layout';
 import { store } from './store/store';
-import { setTab } from './store/actions/tabActions';
+import { setTab } from './store/actions/actions';
 import './index.css';
 
 const App = () => {
