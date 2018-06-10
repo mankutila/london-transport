@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import {Stop} from '../Stop/Stop'
 
 export class SearchPageComponent extends Component {
+
   render() {
-    console.log(this.props.searchResult);
-    return 'abc'
+    const {searchResult} = this.props;
+    if (searchResult && searchResult.matches && searchResult.matches.length > 0) {
+      return searchResult.matches.map((result, index) => <Stop key={index} {...result} />);
+    } else {
+      return 'No results'
+    }
   }
 }
 
