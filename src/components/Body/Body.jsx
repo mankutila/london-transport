@@ -6,7 +6,8 @@ export class Body extends Component {
   render() {
     return (
       <main className={style.main}>
-        <DataList />
+        {this.props.body}
+        {/*<DataList />*/}
       </main>
     )
   }

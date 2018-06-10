@@ -1,20 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Layout } from './components/Layout/Layout';
+import { BrowserRouter } from 'react-router-dom';
+import { App } from './components/App/App';
 import { store } from './store/store';
 import { setTab } from './store/actions/actions';
 import './index.css';
 
-const App = () => {
-  return <Layout />;
-};
-
 store.dispatch(setTab('bus'));
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
   document.getElementById('app')
 );

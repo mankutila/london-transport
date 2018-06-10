@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import style from './SearchInput.css';
 import { searchStops } from '../../helpers/fetchUtils'
+import {setSearchResults} from '../../store/actions/actions'
+import { connect } from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
-export class SearchInput extends Component {
+export class SearchInputComponent extends Component {
   search = async (query) => {
-    this.setState({query})
-    console.log(await searchStops(query))
+    const {history, setSearchResult} = this.props;
+    setSearchResult(await searchStops(query));
+    history.push('/search');
   }
 
   render() {
@@ -22,9 +26,23 @@ export class SearchInput extends Component {
           placeholder="Search stops"
           ref={(searchInput) => { this.searchInput = searchInput }}
         />
-        <button className={style.btn}>Search</button>
+        <button className={style.btn} title="Search stops">Search</button>
       </form>
 
     )
   }
 }
+
+const mapStateToProps = (state) => ({
+  searchResult: state.searchResult
+});
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setSearchResult: query => {
+      dispatch(setSearchResults(query));
+    }
+  }
+};
+
+export const SearchInput = withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchInputComponent));
