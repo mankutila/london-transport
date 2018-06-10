@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  margin-bottom: 40px;
+}
+.input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  -webkit-appearance: none;
+  color: #fff;
+  padding: 5px;
+}
+.btn {
+  border: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 139 139'%3E%3Cpath d='M127.558 111.961L100.249 84.65c4.64-7.387 7.333-16.118 7.333-25.488 0-26.509-21.49-47.996-47.998-47.996S11.588 32.653 11.588 59.162c0 26.51 21.487 47.995 47.996 47.995 10.197 0 19.642-3.188 27.414-8.605l26.984 26.986c1.875 1.873 4.333 2.806 6.788 2.806 2.458 0 4.913-.933 6.791-2.806 3.747-3.751 3.747-9.827-.003-13.577zM59.584 91.607c-17.917 0-32.443-14.525-32.443-32.443S41.667 26.72 59.584 26.72c17.918 0 32.443 14.526 32.443 32.444S77.502 91.607 59.584 91.607z' fill='%23ffffff'/%3E%3C/svg%3E%0A") no-repeat center / 69%;
+  text-indent: -9999px;
+  flex: 1 0 auto;
+}
+.input:focus, .btn:focus {
+  outline: none;
+}
