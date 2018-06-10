@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-export class StopPageComponent extends Component {
+class StopPageComponent extends Component {
 
   render() {
     return (

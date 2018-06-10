@@ -4,6 +4,7 @@ import { DataList } from '../DataList/DataList';
 import {SearchPage} from '../SearchPage/SearchPage'
 import {StopPage} from '../StopPage/StopPage'
 import {Switch, Route, withRouter} from 'react-router-dom';
+import { LinePage } from '../LinePage/LinePage'
 
 const SearchView = () => {
   return <Layout body={<SearchPage />} />
@@ -14,6 +15,9 @@ const IndexView = () => {
 const StopView = () => {
   return <Layout body={<StopPage />} />
 }
+const LineView = () => {
+  return <Layout body={<LinePage />} />
+}
 
 class AppComponent extends Component {
   render() {
@@ -22,6 +26,7 @@ class AppComponent extends Component {
         <Route exact path="/" component={IndexView} />
         <Route exact path="/search" component={SearchView} />
         <Route exact path="/stop/:id" component={StopView} />
+        <Route exact path="/line/:id" component={LineView} />
       </Switch>
     );
   }
