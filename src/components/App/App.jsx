@@ -1,26 +1,26 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Layout } from '../Layout/Layout';
-import { DataList } from '../DataList/DataList';
-import {SearchPage} from '../SearchPage/SearchPage'
-import {StopPage} from '../StopPage/StopPage'
-import {Switch, Route, withRouter} from 'react-router-dom';
-import { LinePage } from '../LinePage/LinePage'
+import { RoutesPage } from '../RoutesPage/RoutesPage';
+import { SearchPage } from '../SearchPage/SearchPage';
+import { StopPage } from '../StopPage/StopPage';
+import { Switch, Route, withRouter } from 'react-router-dom';
+import { LinePage } from '../LinePage/LinePage';
 
 const SearchView = () => {
-  return <Layout body={<SearchPage />} />
-}
+  return <Layout body={<SearchPage />} />;
+};
 const IndexView = () => {
-  return <Layout body={<DataList />} />
-}
+  return <Layout body={<RoutesPage />} />;
+};
 const StopView = () => {
-  return <Layout body={<StopPage />} />
-}
+  return <Layout body={<StopPage />} />;
+};
 const LineView = () => {
-  return <Layout body={<LinePage />} />
-}
+  return <Layout body={<LinePage />} />;
+};
 
 class AppComponent extends Component {
-  render() {
+  render () {
     return (
       <Switch>
         <Route exact path="/" component={IndexView} />

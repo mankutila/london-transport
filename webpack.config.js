@@ -1,40 +1,43 @@
-require("babel-polyfill");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+require('babel-polyfill');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html"
+  template: './src/index.html',
+  filename: './index.html'
 });
 
 module.exports = {
   entry: [
     'babel-polyfill',
-    './src/index.js',
+    './src/index.js'
   ],
+  output: {
+    publicPath: '/'
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         },
         resolve: {
-          extensions: ['.js', '.jsx'],
+          extensions: ['.js', '.jsx']
         }
       },
       {
         test: /\.css$/,
         use: [
           {
-            loader: "style-loader"
+            loader: 'style-loader'
           },
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               modules: true,
               importLoaders: 1,
-              localIdentName: "[name]_[local]_[hash:base64]",
+              localIdentName: '[name]_[local]_[hash:base64]',
               sourceMap: true,
               minimize: true
             }
@@ -44,5 +47,5 @@ module.exports = {
     ]
   },
   plugins: [htmlWebpackPlugin],
-  devtool: 'eval'
+  devtool: 'source-maps'
 };

@@ -2,15 +2,17 @@
   font-weight: 700;
 }
 .line-item {
-  /*flex: 1 0 100px;
-  height: 100px;
+  flex: 1 0 70px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #a6cfd5;
-  font-size: 30px;
-  border: 1px solid hsla(188, 36%, 67%, 1);
-  margin: -1px;*/
+  background-color: #f4feff;
+  font-size: 19px;
+  border: 1px solid #8dc1c9;
+  margin: 2px;
+  padding: 5px 12px;
+  text-align: center;
 }
 .routes {
   font-weight: 400;
