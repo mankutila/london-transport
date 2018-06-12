@@ -22,3 +22,13 @@ export const getStopsOnLine = async (line) => {
   const urlOutbound = `https://api.tfl.gov.uk/Line/${line}/Route/Sequence/outbound?${CREDS}`;
   return [await fetchData(urlInbound), await fetchData(urlOutbound)];
 };
+
+export const getArrivalsToStop = async (stopId) => {
+  const url = `https://api.tfl.gov.uk/StopPoint/${stopId}/Arrivals?${CREDS}`;
+  return await fetchData(url);
+};
+
+export const getStopData = async (stopId) => {
+  const url = `https://api.tfl.gov.uk/StopPoint/${stopId}?${CREDS}`;
+  return await fetchData(url);
+};

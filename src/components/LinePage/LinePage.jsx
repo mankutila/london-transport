@@ -31,7 +31,6 @@ class LinePageComponent extends Component {
   render () {
     const { history, match } = this.props;
     const { stops, loading } = this.state;
-    console.log(stops);
     const pathInbound = stops && stops[0] && getCoordArrayFromStr(stops[0].lineStrings[0]);
     const pathOutbound = stops && stops[1] && getCoordArrayFromStr(stops[1].lineStrings[0]);
     return (
