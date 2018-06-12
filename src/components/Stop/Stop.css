@@ -1,0 +1,20 @@
+.stoplink {
+  display: block;
+  padding-left: 20px;
+  margin: 20px 0;
+  position: relative;
+}
+.stoplink::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #8DC2C9;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+.inbound::before {
+ background-color: #FFC48E;
+}
