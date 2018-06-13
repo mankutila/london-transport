@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { getArrivalsToStop, getStopData } from '../../helpers/fetchUtils';
 import { Map } from '../Map/Map';
 import { Loading } from '../Loading/Loading';
@@ -53,3 +54,8 @@ class StopPageComponent extends Component {
 }
 
 export const StopPage = withRouter(StopPageComponent);
+
+StopPage.propTypes = {
+  history: PropTypes.object,
+  match: PropTypes.object
+};
