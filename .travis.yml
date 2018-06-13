@@ -11,7 +11,7 @@ before_deploy:
 - echo "Initializing deployment..."
 deploy:
   provider: heroku
-  api_key: HEROKU_API
+  api_key: $HEROKU_API
   app: london-transport
   on: master
 after_deploy:
