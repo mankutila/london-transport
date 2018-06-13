@@ -3,7 +3,9 @@
 Link:
 
 It can:
-- feature
-- feature
+- search stops;
+- show lines list for buses, tube and river buses;
+- show stop list for lines;
+- show arrival info for stop points.
 
 Author Maria Peredriy
