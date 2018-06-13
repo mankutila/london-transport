@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import style from './StopPage.css';
 import { getArrivalsToStop, getStopData } from '../../helpers/fetchUtils';
-import {Map} from '../Map/Map';
-import {Loading} from '../Loading/Loading';
-import { LineItem } from '../LineItem/LineItem'
+import { Map } from '../Map/Map';
+import { Loading } from '../Loading/Loading';
+import { LineItem } from '../LineItem/LineItem';
+import style from './StopPage.css';
 
 const mapOptions = {
   googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBzJHmR-D-VJ9fVj8PhKz1z5hhKwhPJ-Ys",
@@ -29,7 +29,6 @@ class StopPageComponent extends Component {
       arrivals: await getArrivalsToStop(id),
       loading: false
     });
-    console.log(await getArrivalsToStop(id));
   }
 
   render () {

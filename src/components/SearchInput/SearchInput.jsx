@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import style from './SearchInput.css';
-import { searchStops } from '../../helpers/fetchUtils';
-import { setSearchResults } from '../../store/actions/actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { searchStops } from '../../helpers/fetchUtils';
+import { setSearchResults } from '../../store/actions/actions';
+import style from './SearchInput.css';
 
 export class SearchInputComponent extends Component {
   search = async (query) => {
@@ -28,7 +29,6 @@ export class SearchInputComponent extends Component {
         />
         <button className={style.btn} title="Search stops">Search</button>
       </form>
-
     );
   }
 }
@@ -46,3 +46,8 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export const SearchInput = withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchInputComponent));
+
+connect.propTypes = {
+  searchResult: PropTypes.string,
+  setSearchResult: PropTypes.function
+};

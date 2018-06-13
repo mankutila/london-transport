@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { getCoordArrayFromStr } from '../../helpers/utils';
 import { getStopsOnLine } from '../../helpers/fetchUtils';
 import { Stop } from '../Stop/Stop';
 import { Loading } from '../Loading/Loading';
-import style from './LinePage.css';
 import { Map } from '../Map/Map';
-import { getCoordArrayFromStr } from '../../helpers/utils';
+import style from './LinePage.css';
 
 const mapOptions = {
   googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBzJHmR-D-VJ9fVj8PhKz1z5hhKwhPJ-Ys",
@@ -56,10 +57,14 @@ class LinePageComponent extends Component {
             </div>
           </div>
         }
-
       </React.Fragment>
     );
   }
 }
 
 export const LinePage = withRouter(LinePageComponent);
+
+LinePageComponent.propTypes = {
+  history: PropTypes.object,
+  match: PropTypes.object
+};

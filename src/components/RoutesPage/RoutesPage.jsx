@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { fetchLinesWithRoutes } from '../../helpers/fetchUtils';
-import { Loading } from '../Loading/Loading';
-
 import { capitalize } from '../../helpers/utils';
+import { Loading } from '../Loading/Loading';
 import { Lines } from '../Lines/Lines';
 
-class DataListComponent extends Component {
+class RoutesPageComponent extends Component {
   state = {
     data: [],
     loading: true,
@@ -40,9 +40,8 @@ class DataListComponent extends Component {
   render () {
     return (
       <section>
-        {this.state.loading ? <Loading /> : ''}
         <h1>{capitalize(this.props.currentTab)}</h1>
-        <Lines data={this.state.data}/>
+        {this.state.loading ? <Loading /> : <Lines data={this.state.data}/>}
       </section>
     );
   }
@@ -52,4 +51,8 @@ const mapStateToProps = (state) => ({
   currentTab: state.currentTab
 });
 
-export const RoutesPage = connect(mapStateToProps)(DataListComponent);
+export const RoutesPage = connect(mapStateToProps)(RoutesPageComponent);
+
+RoutesPageComponent.propTypes = {
+  currentTab: PropTypes.string
+};

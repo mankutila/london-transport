@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import style from './Stop.css';
 
-export class StopComponent extends Component {
-  render () {
-    const { id, name, inbound } = this.props;
-    return <Link to={`/stop/${id}`} className={`${style.stoplink} ${inbound ? style.inbound : ''}`}>{name}</Link>;
-  }
-}
+export const Stop = (props) => {
+  const { id, name, inbound } = props;
+  return <Link to={`/stop/${id}`} className={`${style.stoplink} ${inbound ? style.inbound : ''}`}>{name}</Link>;
+};
 
-export const Stop = withRouter(StopComponent);
+Stop.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  inbound: PropTypes.boolean
+};

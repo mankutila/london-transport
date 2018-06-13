@@ -1,5 +1,6 @@
-import { withScriptjs, withGoogleMap, GoogleMap, Marker, Polyline } from "react-google-maps";
 import React from 'react';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker, Polyline } from "react-google-maps";
+import PropTypes from 'prop-types';
 
 export const Map = withScriptjs(withGoogleMap((props) => {
   const { polylineShown, markerShown, pathInbound, pathOutbound, coord } = props;
@@ -15,3 +16,11 @@ export const Map = withScriptjs(withGoogleMap((props) => {
     </GoogleMap>
   );
 }));
+
+withGoogleMap.propTypes = {
+  polylineShown: PropTypes.function,
+  markerShown: PropTypes.function,
+  pathInbound: PropTypes.array,
+  pathOutbound: PropTypes.array,
+  coord: PropTypes.object
+};

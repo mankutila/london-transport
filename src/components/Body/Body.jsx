@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import style from './Body.css';
 
-export class Body extends Component {
-  render () {
-    return (
-      <main className={style.main}>
-        {this.props.body}
-      </main>
-    );
-  }
-}
+export const Body = (props) => {
+  return (
+    <main className={style.main}>
+      {props.body}
+    </main>
+  );
+};
+
+Body.propTypes = {
+  body: PropTypes.element
+};

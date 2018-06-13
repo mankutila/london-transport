@@ -1,7 +1,8 @@
 import React from 'react';
-import style from './LineItem.css';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { getRightDate } from '../../helpers/utils';
+import style from './LineItem.css';
 
 export const LineItem = (props) => {
   const { id, name = 'Unnamed', arrival } = props;
@@ -14,4 +15,10 @@ export const LineItem = (props) => {
       {arrival && <div className={style.arrival}>{date}</div>}
     </div>
   );
+};
+
+LineItem.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  arrival: PropTypes.object
 };

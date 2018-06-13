@@ -1,6 +1,7 @@
 import React from 'react';
-import style from './Lines.css';
+import PropTypes from 'prop-types';
 import { LineItem } from '../LineItem/LineItem';
+import style from './Lines.css';
 
 export const Lines = (props) => {
   return (
@@ -8,4 +9,8 @@ export const Lines = (props) => {
       {props.data.map((item, index) => <LineItem key={index} {...item} />)}
     </div>
   );
+};
+
+Lines.propTypes = {
+  data: PropTypes.array
 };

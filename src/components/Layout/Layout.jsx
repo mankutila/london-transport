@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Header } from '../Header/Header';
 import { Body } from '../Body/Body';
 import { Footer } from '../Footer/Footer';
 import { Sidebar } from '../Sidebar/Sidebar';
 
 import style from './Layout.css';
-
 
 export const Layout = (props) => {
   return (
@@ -16,4 +16,8 @@ export const Layout = (props) => {
       <Footer />
     </div>
   );
+};
+
+Layout.propTypes = {
+  body: PropTypes.element
 };
