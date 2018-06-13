@@ -6,3 +6,6 @@ install:
 - npm install
 script:
 - npm run lint
+before_deploy:
+- echo "Initializing deployment..."
+- npm run build
