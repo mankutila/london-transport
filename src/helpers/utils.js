@@ -11,3 +11,15 @@ export function getCoordArrayFromStr (str = '') {
     };
   });
 }
+
+function formatTime(time) {
+  const hours = '0' + time.getHours();
+  const minutes = '0' + time.getMinutes();
+  return `${hours.slice(-2)}:${minutes.slice(-2)}`;
+}
+
+export function getRightDate(date) {
+  const initDate = new Date(date);
+  const userTimezoneOffset = initDate.getTimezoneOffset() * 60000;
+  return formatTime(new Date(initDate.getTime() + userTimezoneOffset));
+}

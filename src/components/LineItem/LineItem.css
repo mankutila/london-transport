@@ -14,6 +14,17 @@
   padding: 5px 12px;
   text-align: center;
 }
+.line-item-stop {
+  background: none;
+  border: none;
+  text-align: left;
+  justify-content: flex-start;
+  height: auto;
+  margin: 10px 0;
+}
+.line-item-stop .line-name {
+  margin-right: 10px;
+}
 .routes {
   font-weight: 400;
   padding-left: 20px;
