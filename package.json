@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/mankutila/london-transport/issues"
   },
-  "homepage": "https://github.com/mankutila/london-transport#readme",
+  "homepage": "https://london-transport.herokuapp.com/",
   "devDependencies": {
     "autoprefixer": "^8.6.2",
     "babel-core": "^6.26.3",
