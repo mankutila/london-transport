@@ -10,6 +10,5 @@ export const Stop = (props) => {
 
 Stop.propTypes = {
   id: PropTypes.string,
-  name: PropTypes.string,
-  inbound: PropTypes.boolean
+  name: PropTypes.string
 };

@@ -3,3 +3,8 @@
   color: #0d0221;
   padding: 20px 30px;
 }
+@media (max-width: 900px) {
+  .main  {
+    padding: 20px 13px 50px;
+  }
+}

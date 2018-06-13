@@ -14,3 +14,8 @@
   color: #fff;
   padding: 3px 15px;
 }
+@media (max-width: 900px) {
+  .header {
+    height: 50px;
+  }
+}

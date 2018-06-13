@@ -53,6 +53,6 @@ const mapStateToProps = (state) => ({
 
 export const RoutesPage = connect(mapStateToProps)(RoutesPageComponent);
 
-RoutesPageComponent.propTypes = {
+connect.propTypes = {
   currentTab: PropTypes.string
 };
